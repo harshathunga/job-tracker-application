@@ -17,6 +17,55 @@ router.get("/all", (req, res) => {
   });
 });
 
+router.put("/job/:id", (req, res) => {
+  const id = req.params.id;
+
+  const {
+    companyName,
+    jobTitle,
+    location,
+    salaryRange,
+    applicationDate,
+    status,
+    applicationMethod,
+    jobLink,
+    notes,
+    interviewDate,
+  } = req.body;
+
+  console.log(
+    companyName,
+    jobTitle,
+    location,
+    salaryRange,
+    applicationDate,
+    status,
+    applicationMethod,
+    jobLink,
+    notes,
+    interviewDate === "" ? null : interviewDate,
+    id
+  );
+
+  db.query("update jobtrack set companyName = ?, jobtitile = ?, location = ?, salaryRange = ?,applicationDate=?,jstatus = ?,applicationMethod = ?,jobLink = ?,notes =?,interviewDate=? where id = ? ",[companyName,
+      jobTitle,
+      location,
+      salaryRange,
+      applicationDate,
+      status,
+      applicationMethod,
+      jobLink,
+      notes,
+      interviewDate === "" ? null : interviewDate,id
+      ], (err, rlts) => {
+        if(err) {
+          res.json({err: err})
+        } else{
+          res.json({msg: "posted "})
+        }
+      })
+});
+
 router.get("/job/:id", (req, res) => {
   const id = req.params.id;
   db.query("select * from jobtrack where id = ? ", [id], (err, rlts) => {
@@ -31,7 +80,7 @@ router.get("/job/:id", (req, res) => {
 router.delete("/job/:id", (req, res) => {
   const id = req.params.id;
 
-  console.log(id)
+  console.log(id);
 
   db.query("delete from jobtrack where id = ? ", [id], (err, reslt) => {
     if (err) {
