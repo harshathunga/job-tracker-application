@@ -5,6 +5,7 @@ import "./App.css";
 import Application from "./Application";
 import Dashboard from "./Dashboard";
 import { data } from "./data";
+import Login from "./Login";
 
 
 
@@ -72,6 +73,8 @@ function App() {
   const total_applications = jdata.length;
   return (
     <div>
+
+      {/* <Login></Login> */}
       <nav className=" flex justify-between m-10 text-blue-600 ">
         <h1 className="font-bold text-lg">job track</h1>
         <button onClick={() => setform_toggle(true)}> add application</button>
@@ -275,6 +278,9 @@ function App() {
       <main className="m-6 ">
         {activeView === "dashboard" ? <Dashboard /> : <Application />}
       </main>
+
+
+      
     </div>
   );
 }

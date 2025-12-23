@@ -28,45 +28,45 @@ function Dashboard() {
   console.log(total_applications, pending, Interviews, offered)
 
   return (
-    <div>
+    <div className="flex justify-between  ">
 
-      <div className="flex justify-between border-2 p-5 mt-2 rounded-lg">
+      <div className="flex justify-between border-2 p-5 m-2 mt-2 rounded-lg">
         <div>
           <p>Total Applications</p>
           <p className="font-bold text-3xl"> {total_applications} </p>
         </div>
 
-        <div>emoji</div>
+        
       </div>
 
 
-      <div className="flex justify-between border-2 p-5 mt-2 rounded-lg">
-        <div>
+      <div className="flex justify-between border-2 p-5 m-2 mt-2 rounded-lg">
+        <div className="w-[100px]">
           <p>Pending</p>
           <p className="font-bold text-3xl"> {pending} </p>
         </div>
 
-        <div>emoji</div>
+        
       </div>
 
 
       <div className="flex justify-between border-2 p-5 mt-2 rounded-lg">
-        <div>
+        <div className="w-[100px]" >
           <p>Interviews</p>
           <p className="font-bold text-3xl"> {Interviews} </p>
         </div>
 
-        <div>emoji</div>
+        
       </div>
 
 
       <div className="flex justify-between border-2 p-5 mt-2 rounded-lg">
-        <div> 
+        <div className="w-[100px]"> 
           <p>Offers</p>
           <p className="font-bold text-3xl"> {offered} </p>
         </div>
 
-        <div>emoji</div>
+        
       </div>
 
     </div>
