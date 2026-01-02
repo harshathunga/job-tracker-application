@@ -29,3 +29,5 @@ A full-stack web application to help users manage and track their job applicatio
 - Enhanced UI/UX skills with Tailwind CSS
 
 - Practiced building RESTful APIs and managing data with MySQL
+
+https://www.linkedin.com/posts/harsha-vardhan-thunga-316b46203_webdevelopment-reactjs-nodejs-activity-7410506878058954752-QYdU?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADP14kIBaO5LeEs1gWvPYxiY4afVhBYraZs
